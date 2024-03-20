@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pyhexaly-sandbox"
+version = "0.1.0"
+description = "learn how to run hexaly via python"
+authors = ["RyoNak-billy <nakagamiryo0901@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+localsolver = {version = "^12.5.20240229", source = "hexaly-pip"}
+cvxpy = "^1.4.2"
+ortools = "^9.9.3963"
+scipy = "^1.12.0"
+
+[[tool.poetry.source]]
+name = "hexaly-pip"
+url = "https://pip.hexaly.com"
+priority = "explicit"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
